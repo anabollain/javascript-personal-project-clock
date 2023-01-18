@@ -23,17 +23,29 @@ function setDate(){
     const hour = today.getHours();
     const hourDegrees = ((hour/12)*360) + 90;
     hourHand.setAttribute('style', `transform: rotate(${hourDegrees}deg)`);
-    hourDig.innerHTML = hour +':';
+    if(hour < 10){
+        hourDig.innerHTML = '0' + hour + ':';
+    }else{
+        hourDig.innerHTML = hour +':';
+    }
     //Minutes
     const min = today.getMinutes();
     const minDegrees = ((min/60) * 360) + 90;
     minHand.setAttribute('style', `transform: rotate(${minDegrees}deg)`);
-    minDig.innerHTML = min +':';
+    if(min < 10){
+        minDig.innerHTML = '0' + min + ':';
+    }else{
+        minDig.innerHTML = min +':';
+    }
     //Seconds
     const second = today.getSeconds();
     const secondDegrees = ((second/60) * 360) + 90;
     secondHand.setAttribute('style', `transform: rotate(${secondDegrees}deg)`);
-    secondDig.innerHTML = second;
+    if(second < 10){
+        secondDig.innerHTML = '0' + second;
+    }else{
+        secondDig.innerHTML = second;
+    }
 }
 
 //Run function every second
