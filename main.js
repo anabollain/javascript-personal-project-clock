@@ -9,14 +9,6 @@ const hourDig = document.querySelector('.hour-dig');
 const minDig = document.querySelector('.min-dig');
 const secondDig = document.querySelector('.second-dig');
 
-function removeTransition(ev){
-    console.log(ev)
-    console.log('transicion')
-    if(ev.propertyName === 'transform') {
-        return console.log('ya')
-    }
-}
-
 function setDate(){
     const today = new Date();
     //Hour
