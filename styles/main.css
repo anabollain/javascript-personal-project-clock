@@ -1,0 +1,84 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+}
+
+.body{
+    /*General properties*/
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../images/background-04.jpg');
+    background-size: cover;
+    background-position: center center;
+    /*Display*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock-face{
+    /*General properties*/
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    border: 5px solid white;
+    /*Position*/
+    position: relative;
+    box-shadow: rgba(215, 213, 213, 0.56) 0px 22px 70px 4px;
+}
+
+.hand{
+    /*General properties*/
+    width: 45%;
+    height: 5px;
+    border-radius: 2.5px;
+    background-color: rgba(255, 255, 255, 0.742);
+    /*Position*/
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.1, 1.7, 0.6, 1);
+}
+
+.min-hand{
+    background-color:rgba(255, 255, 255, 0.588);
+    height: 3.8px;
+}
+
+.second-hand{
+    background-color:rgba(255, 255, 255, 0.407);
+    height: 2px;
+}
+
+.center{
+    /*General properties*/
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: rgb(85, 75, 32);
+    box-shadow: rgba(215, 213, 213, 0.56) 0px 22px 70px 4px;
+    /*Position*/
+    z-index: 5;
+    position: absolute;
+    transform: translate(-12.5px, -12.5px);
+    top: 50%;
+    left: 50%;
+}
+
+.clock-digital{
+    /*General properties*/
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.711);
+    /*Position*/
+    position: absolute;
+    bottom: 8%;
+    right: 8%;
+    /*Display*/
+    display: flex;
+    gap: 5px;
+}
